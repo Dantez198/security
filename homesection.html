@@ -1,0 +1,315 @@
+  <!-- Main Content Sections -->
+  <!-- Home Section -->
+  <section id="homeSection" class="section active">
+    <div class="container mt-4">
+        <!-- Home Section -->
+        <div class="section-content active" id="homeSection">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title text-center mb-4">Qwetu Security Dashboard</h2>
+                            <p class="lead text-center">Welcome to the Qwetu Security Updates portal. This platform helps security assistants manage and track critical safety and operational data for student hostels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row dashboard-summary">
+                <div class="col-md-3 mb-3">
+                    <div class="summary-card">
+                        <h3>Power Blackouts</h3>
+                        <p>3 <small class="text-muted">(This Month)</small></p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="summary-card blue">
+                        <h3>Total Issued Keys</h3>
+                        <p>2 <small class="text-muted">(This Month)</small></p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="summary-card purple">
+                        <h3>Current Fuel Level</h3>
+                        <p>75% <small class="text-muted">(450 Liters)</small></p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="summary-card light-blue">
+                        <h3>Fire Alarms</h3>
+                        <p>1 <small class="text-muted">(This Month)</small></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- First row of information panels -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <span class="text-blue">Recent Power Blackouts</span>
+                            <button class="btn btn-sm btn-light" onclick="showSection('powerBlackoutSection')">View All</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Duration</th>
+                                            <th>Fuel Used</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>28/02/2025</td>
+                                            <td>2h 15m</td>
+                                            <td>45 liters</td>
+                                        </tr>
+                                        <tr>
+                                            <td>15/02/2025</td>
+                                            <td>1h 30m</td>
+                                            <td>30 liters</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <span class="text-blue">Recent Fuel Deliveries</span>
+                            <button class="btn btn-sm btn-light" onclick="showSection('fuelDeliverySection')">View All</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>20/02/2025</td>
+                                            <td>500 liters</td>
+                                            <td><span class="badge bg-success">Completed</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>05/02/2025</td>
+                                            <td>300 liters</td>
+                                            <td><span class="badge bg-success">Completed</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second row of information panels (new additions) -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <span class="text-blue">Recent Key Issuances</span>
+                            <button class="btn btn-sm btn-light" onclick="showSection('keyIssuanceSection')">View All</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Resident</th>
+                                            <th>Room</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John Kimani</td>
+                                            <td>B404</td>
+                                            <td>03/04/2025</td>
+                                            <td><span class="badge bg-warning">Not Returned</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jane Wambui</td>
+                                            <td>A205</td>
+                                            <td>25/03/2025</td>
+                                            <td><span class="badge bg-success">Returned</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kevin Wambui</td>
+                                            <td>A205</td>
+                                            <td>25/03/2025</td>
+                                            <td><span class="badge bg-success">Returned</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <span class="text-blue">Recent Fire Alarm Incidents</span>
+                            <button class="btn btn-sm btn-light" onclick="showSection('fireAlarmsSection')">View All</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Location</th>
+                                            <th>Level</th>
+                                            <th>Triggered By</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>10/03/2025</td>
+                                            <td>Block C, 3rd Floor</td>
+                                            <td>Medium</td>
+                                            <td><span class="badge bg-success">Cooking</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>18/02/2025</td>
+                                            <td>Kitchen Area</td>
+                                            <td>Low</td>
+                                            <td><span class="badge bg-success">Faulty</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>18/02/2025</td>
+                                            <td>Room 444</td>
+                                            <td>Low</td>
+                                            <td><span class="badge bg-success">Fumigation</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Third row of information panels (additional panels) -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <span class="text-blue">Recent Patrol Reports</span>
+                            <button class="btn btn-sm btn-light" onclick="showSection('patrolReportSection')">View All</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Area</th>
+                                            <th>Security Officer</th>
+                                            <th>Findings</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>06/04/2025</td>
+                                            <td>East Wing</td>
+                                            <td>C. Otieno</td>
+                                            <td>All clear</td>
+                                        </tr>
+                                        <tr>
+                                            <td>05/04/2025</td>
+                                            <td>West Wing</td>
+                                            <td>M. Waweru</td>
+                                            <td>Broken lock reported</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+                            <span class="text-blue">Gaming Equipment Status</span>
+                            <button class="btn btn-sm btn-light" onclick="showSection('gameItemIssuanceSection')">View All</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Status</th>
+                                            <th>Currently With</th>
+                                            <th>Since</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>PlayStation Controller</td>
+                                            <td><span class="badge bg-warning">Checked Out</span></td>
+                                            <td>David Njoroge</td>
+                                            <td>05/04/2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Xbox Console</td>
+                                            <td><span class="badge bg-success">Available</span></td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Core Values Section -->
+    <div class="core-values">
+        <h2>Core Values</h2>
+        <div class="value-item">
+            <i class="fas fa-check-circle"></i> <strong>I</strong> – Integrity
+        </div>
+        <div class="value-item">
+            <i class="fas fa-user-secret"></i> <strong>C</strong> – Confidentiality
+        </div>
+        <div class="value-item">
+            <i class="fas fa-heart"></i> <strong>H</strong> – Honesty
+        </div>
+        <div class="value-item">
+            <i class="fas fa-balance-scale"></i> <strong>A</strong> – Accountability
+        </div>
+        <div class="value-item">
+            <i class="fas fa-handshake"></i> <strong>T</strong> – Trustworthy
+        </div>
+    </div>
+
+    <!-- Vision Section -->
+    <div class="vision-section">
+        <h2>Our Vision</h2>
+        <p>Providing a Secure Environment for Learning and Growth</p>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="mission-section">
+        <h2>Our Mission</h2>
+        <p>Going Far and Beyond: Empowering Safety Through Innovative Security Solutions</p>
+    </div>
+</section>

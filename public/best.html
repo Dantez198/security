@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qwetu/Qejani Security System</title>
+    
+    <!-- External CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+ 
+  
+
+    <!-- Header -->
+<div class="main-container" style="display: flex; justify-content: center;">
+    <div>
+      <header style="display: flex; align-items: center; gap: 30px;">
+        <img src="/qejani logo.jpg" alt="Logo" style="height: 140px;">
+        <h1>Qwetu/Qejani Security System</h1>
+      </header>
+  
+      <div class="date-time-container" style="text-align: center;">
+        <div id="dateTimeDisplay" class="date-time-display"></div>
+      </div>
+    </div>
+  </div>
+  
+    
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        
+        <div class="nav-buttons">
+            <!-- Home Button -->
+            <button id="homeBtn" class="nav-btn active"><i class="fas fa-home"></i> Home</button>
+            
+            <!-- Key Control Dropdown -->
+            <div class="dropdown">
+                <button id="keyControlBtn" class="nav-btn"><i class="fas fa-key"></i> Key Control</button>
+                <div class="dropdown-content">
+                    <button id="keyIssuanceBtn"><i class="fas fa-key"></i> Key Issuance</button>
+                    <button id="masterCardControlBtn"><i class="fas fa-id-card"></i> MasterCard Control</button>
+                </div>
+            </div>
+            
+            <!-- Gaming Control Dropdown -->
+            <div class="dropdown">
+                <button id="gamingControlBtn" class="nav-btn"><i class="fas fa-gamepad"></i> Gaming Control</button>
+                <div class="dropdown-content">
+                    <button id="remoteIssuanceBtn"><i class="fas fa-remote"></i><i class="fas fa-tv"></i> Remote Issuance</button>
+                    <button id="gamingItemsBtn"><i class="fas fa-gamepad"></i> Gaming Items</button>
+                </div>
+            </div>
+            
+            <!-- Generator Control Dropdown -->
+            <div class="dropdown">
+                <button id="generatorBtn" class="nav-btn"><i class="fas fa-car-battery"></i> Generator </button>
+                <div class="dropdown-content">
+                    <button id="fireAlarmsBtn" class="sub-nav-btn"><i class="fas fa-fire-extinguisher"></i> Fire Alarms</button>
+                    <button id="powerBlackoutBtn" class="sub-nav-btn"><i class="fas fa-power-off"></i> Power Blackout</button>
+                    <button id="fuelDeliveryBtn" class="sub-nav-btn"><i class="fas fa-truck"></i> Fuel Delivery</button>
+                    <button id="dailyFuelBtn" class="sub-nav-btn"><i class="fas fa-gas-pump"></i> Daily Fuel Level</button>
+                    <button id="fuelTopUpBtn" class="sub-nav-btn"><i class="fas fa-cogs"></i> Fuel Top Up</button>
+                </div>
+            </div>
+
+            <!-- Add this inside the nav-buttons div, after the Generator dropdown -->
+<div class="dropdown">
+    <button id="recordsBtn" class="nav-btn"><i class="fas fa-clipboard"></i> Records</button>
+    <div class="dropdown-content">
+        <button id="statementsBtn" class="sub-nav-btn"><i class="fas fa-file-alt"></i> Statements</button>
+        <button id="gatepassBtn" class="sub-nav-btn"><i class="fas fa-clipboard-check"></i> Gatepass</button>
+        <button id="patrolReportBtn" class="sub-nav-btn"><i class="fas fa-walking"></i> Patrol Report</button>
+    </div>
+</div>
+        </div>
+    </nav>
+
+    <!-- Main Content Sections -->
+  <!-- Home Section -->
+<section id="homeSection" class="section active">
+    <div class="container mt-4">
+        <!-- Home Section -->
+        <div class="section-content active" id="homeSection">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title text-center mb-4">Qwetu Security Dashboard</h2>
+                            <p class="lead text-center">Welcome to the Qwetu Security Updates portal. This platform helps security assistants manage and track critical safety and operational data for student hostels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qwetu Security Analytics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    
+</head>
+<body>
+    <!-- Subheading for the section -->
+            <h2>Key Events This Month</h2>
+            <div class="row dashboard-summary">
+                <div class="col-md-3 mb-3">
+                    <div class="summary-card">
+                        <h3>Power Blackouts</h3>
+                        <p>3 <small class="text-muted">(This Month)</small></p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="summary-card blue">
+                        <h3>Total Issued Keys</h3>
+                        <p>2 <small class="text-muted">(This Month)</small></p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="summary-card purple">
+                        <h3>Current Fuel Level</h3>
+                        <p>75% <small class="text-muted">(450 Liters)</small></p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="summary-card light-blue">
+                        <h3>Fire Alarms</h3>
+                        <p>1 <small class="text-muted">(This Month)</small></p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="summary-card light-blue">
+                        <h3>Incidents</h3>
+                        <p>1 <small class="text-muted">(Engagements This Month)</small></p>
+                    </div>
+                </div>
+            </div>
+
+            
+    <div class="analytics-container">
+        <!-- Header -->
+        <div class="analytics-header">
+            <h1><i class="fas fa-chart-line"></i> Security Analytics Dashboard</h1>
+            <p>Comprehensive insights into Qwetu Security Operations</p>
+        </div>
+
+        <!-- Content -->
+        <div class="analytics-content">
+            <!-- Key Metrics -->
+            <div class="row mb-4">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    
+                        
+                        
+                    
+            </div>
+
+            <!-- Charts Row 1 -->
+            <div class="row mb-4">
+                <div class="col-lg-8 mb-4">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <div>
+                                <h3 class="chart-title">Security Incidents Trend</h3>
+                                <p class="chart-subtitle">Monthly comparison of security incidents</p>
+                            </div>
+                            <div class="time-filter">
+                                <button class="active">6M</button>
+                                <button>1Y</button>
+                                <button>All</button>
+                            </div>
+                        </div>
+                        <div class="chart-canvas">
+                            <canvas id="incidentsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <div>
+                                <h3 class="chart-title">Key Status Distribution</h3>
+                                <p class="chart-subtitle">Current key return status</p>
+                            </div>
+                        </div>
+                        <div class="chart-canvas">
+                            <canvas id="keyStatusChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row 2 -->
+            <div class="row mb-4">
+                <div class="col-lg-6 mb-4">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <div>
+                                <h3 class="chart-title">Fire Alarm Categories</h3>
+                                <p class="chart-subtitle">Breakdown by alarm severity</p>
+                            </div>
+                        </div>
+                        <div class="chart-canvas">
+                            <canvas id="fireAlarmChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <div>
+                                <h3 class="chart-title">Generator Usage</h3>
+                                <p class="chart-subtitle">Daily fuel consumption patterns</p>
+                            </div>
+                        </div>
+                        <div class="chart-canvas">
+                            <canvas id="generatorChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            
+        </div>
+    </div>
+
+    <script>
+        // Chart.js configurations and data
+        document.addEventListener('DOMContentLoaded', function() {
+            // Incidents Trend Chart
+            const incidentsCtx = document.getElementById('incidentsChart').getContext('2d');
+            new Chart(incidentsCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'july','Aug','Sept','Oct','Nov','Dec'],
+                    datasets: [{
+                        label: 'Security Incidents',
+                        data: [12, 19, 8, 15, 10, 15,13,6,23,55,12,8],
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    }, {
+                        label: 'Fire Alarms',
+                        data: [5, 8, 3, 6, 4, 8,6,3,6,4,8,22],
+                        borderColor: '#f093fb',
+                        backgroundColor: 'rgba(240, 147, 251, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(0,0,0,0.1)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(0,0,0,0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Key Status Pie Chart
+            const keyStatusCtx = document.getElementById('keyStatusChart').getContext('2d');
+            new Chart(keyStatusCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Returned', 'Not Returned', 'Lost', 'Damaged'],
+                    datasets: [{
+                        data: [223, 15, 6, 3],
+                        backgroundColor: [
+                            '#28A745',
+                            '#FFC107',
+                            '#DC3545',
+                            '#6C757D'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        }
+                    }
+                }
+            });
+
+            // Fire Alarm Categories
+            const fireAlarmCtx = document.getElementById('fireAlarmChart').getContext('2d');
+            new Chart(fireAlarmCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Cooking', 'Faulty', 'Fumigation', 'Electrical', 'Other'],
+                    datasets: [{
+                        label: 'Fire Alarms',
+                        data: [25, 15, 12, 8, 5],
+                        backgroundColor: [
+                            '#FF6B6B',
+                            '#4ECDC4',
+                            '#45B7D1',
+                            '#96CEB4',
+                            '#FFEAA7'
+                        ],
+                        borderRadius: 8,
+                        borderSkipped: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(0,0,0,0.1)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Generator Usage Chart
+            const generatorCtx = document.getElementById('generatorChart').getContext('2d');
+            new Chart(generatorCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    datasets: [{
+                        label: 'Fuel Consumption (Liters)',
+                        data: [45, 30, 60, 25, 50, 35, 40],
+                        borderColor: '#00014A',
+                        backgroundColor: 'rgba(0, 1, 74, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(0,0,0,0.1)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(0,0,0,0.1)'
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Time filter functionality
+            document.querySelectorAll('.time-filter button').forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    this.parentNode.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                });
+            });
+
+            // Animate progress rings
+            setTimeout(() => {
+                document.querySelectorAll('.progress-ring .progress').forEach(ring => {
+                    const offset = ring.style.strokeDashoffset;
+                    ring.style.strokeDashoffset = offset;
+                });
+            }, 500);
+        });
+    </script>
+</body>
+</html>
+            
+            
+            <!-- First row of information panels -->
+             <h3>Recent Activities</h3>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        
+                        <div class="card-header d-flex justify-content-between align-items-center" style="background-color: rgb(0, 1, 74);">
+                            <span class="text-white">Recent Power Blackouts</span>
+                            <button class="btn btn-sm btn-light" onclick="showSection('powerBlackoutSection')">View All</button>
+                        </div>
+                        
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead style="background-color: #858181; color:black;">
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Duration</th>
+                                            <th>Fuel Used</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>28/02/2025</td>
+                                            <td>2h 15m</td>
+                                            <td>45 liters</td>
+                                        </tr>
+                                        <tr>
+                                            <td>15/02/2025</td>
+                                            <td>1h 30m</td>
+                                            <td>30 liters</td>
+                                        </tr>
+                                        <tr>
+                                            <td>15/02/2025</td>
+                                            <td>4h 30m</td>
+                                            <td>30 liters</td>
+                                        </tr>
+                                        <tr>
+                                            <td>15/02/2025</td>
+                                            <td>4h 30m</td>
+                                            <td>50 liters</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header d-flex justify-content-between align-items-center"style="background-color: rgb(0, 1, 74);" >
+
+                            <span class="text-white">Recent Fuel Deliveries</span>
+                            <button class="btn btn-sm btn-light" onclick="showSection('fuelDeliverySection')">View All</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead style="background-color:  #858181; color:black;">
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Amount</th>
+                                            <th>Generator Running Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>20/02/2025</td>
+                                            <td>500 liters</td>
+                                            <td><span class="badge bg-success">Running</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>05/02/2025</td>
+                                            <td>300 liters</td>
+                                            <td><span class="badge bg-success">Running</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>05/02/2025</td>
+                                            <td>300 liters</td>
+                                            <td><span class="badge bg-success">Running</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second row of information panels (new additions) -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header d-flex justify-content-between align-items-center" style="background-color: rgb(0, 1, 74);">
+                            <span class="text-white">Recent Key Issuances</span>
+                            <button class="btn btn-sm btn-light" onclick="showSection('keyIssuanceSection')">View All</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead style="background-color:  #858181; color:black;">
+                                        <tr>
+                                            <th>Resident</th>
+                                            <th>Room</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John Kimani</td>
+                                            <td>B404</td>
+                                            <td>03/04/2025</td>
+                                            <td><span class="badge bg-warning">Not Returned</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jane Wambui</td>
+                                            <td>A205</td>
+                                            <td>25/03/2025</td>
+                                            <td><span class="badge bg-success">Returned</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kevin Wambui</td>
+                                            <td>A205</td>
+                                            <td>25/03/2025</td>
+                                            <td><span class="badge bg-success">Returned</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header d-flex justify-content-between align-items-center" style="background-color: rgb(0, 1, 74);">
+                            <span class="text-white">Recent Fire Alarm Incidents</span>
+                            <button class="btn btn-sm btn-light" onclick="showSection('fireAlarmsSection')">View All</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead style="background-color:  #858181; color:black;">
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Room Number</th>
+                                            <th>Level</th>
+                                            <th>Triggered By</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>10/03/2025</td>
+                                            <td>Block C, 3rd Floor</td>
+                                            <td>Medium</td>
+                                            <td><span class="badge bg-success">Cooking</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>18/02/2025</td>
+                                            <td>Kitchen Area</td>
+                                            <td>Low</td>
+                                            <td><span class="badge bg-success">Faulty</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>18/02/2025</td>
+                                            <td>Room 444</td>
+                                            <td>Low</td>
+                                            <td><span class="badge bg-success">Fumigation</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>18/02/2025</td>
+                                            <td>Room 444</td>
+                                            <td>Low</td>
+                                            <td><span class="badge bg-success">Fumigation</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Third row of information panels (additional panels) -->
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header d-flex justify-content-between align-items-center" style="background-color: rgb(0, 1, 74);">
+                            <span class="text-white">Recent Patrol Reports</span>
+                            <button class="btn btn-sm btn-light" onclick="showSection('patrolReportSection')">View All</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead style="background-color:  #858181; color:black;">
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Area</th>
+                                            <th>Security Officer</th>
+                                            <th>Findings</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>06/04/2025</td>
+                                            <td>East Wing</td>
+                                            <td>C. Otieno</td>
+                                            <td>All clear</td>
+                                        </tr>
+                                        <tr>
+                                            <td>05/04/2025</td>
+                                            <td>West Wing</td>
+                                            <td>M. Waweru</td>
+                                            <td>Broken lock reported</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header d-flex justify-content-between align-items-center" style="background-color: rgb(0, 1, 74);">
+                            <span class="text-white">Gaming Equipment Status</span>
+                            <button class="btn btn-sm btn-light" onclick="showSection('gameItemIssuanceSection')">View All</button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead style="background-color: #6c6a67; color:black;">
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Status</th>
+                                            <th>Currently With</th>
+                                            <th>Since</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>PlayStation Controller</td>
+                                            <td><span class="badge bg-warning">Checked Out</span></td>
+                                            <td>David Njoroge</td>
+                                            <td>05/04/2025</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Xbox Console</td>
+                                            <td><span class="badge bg-success">Available</span></td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Core Values Section -->
+    <div class="core-values">
+        <h2>Core Values</h2>
+        <div class="value-item">
+            <i class="fas fa-check-circle"></i> <strong>I</strong> – Integrity
+        </div>
+        <div class="value-item">
+            <i class="fas fa-user-secret"></i> <strong>C</strong> – Confidentiality
+        </div>
+        <div class="value-item">
+            <i class="fas fa-heart"></i> <strong>H</strong> – Honesty
+        </div>
+        <div class="value-item">
+            <i class="fas fa-balance-scale"></i> <strong>A</strong> – Accountability
+        </div>
+        <div class="value-item">
+            <i class="fas fa-handshake"></i> <strong>T</strong> – Trustworthy
+        </div>
+    </div>
+
+    <!-- Vision Section -->
+    <div class="vision-section">
+        <h2>Our Vision</h2>
+        <p>Providing a Secure Environment for Learning and Growth</p>
+    </div>
+
+    <!-- Mission Section -->
+    <div class="mission-section">
+        <h2>Our Mission</h2>
+        <p>Going Far and Beyond: Empowering Safety Through Innovative Security Solutions</p>
+    </div>
+</section>
+
+    <!-- Key Control Section -->
+    <section id="keyControlSection" class="section">
+        <div class="welcome-message">
+            <h2>Welcome to Key Control</h2> 
+        </div>
+
+        <!-- Key Issuance Sub-Section -->
+        <div id="keyIssuanceSection" class="sub-section">
+            <div class="controls">
+                <button id="issueKeyBtn" class="action-btn"><i class="fas fa-plus-circle"></i> Issue Key</button>
+                <div class="search-container">
+                    <input type="text" id="keySearchInput" placeholder="Search...">
+                    <button id="keySearchBtn"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <button id="exportKeyDataBtn" class="export-btn"><i class="fas fa-download"></i> Export Data</button>
+            </div>
+
+            <div class="table-container">
+                <table id="keyTable">
+                    <thead>
+                        <tr>
+                            <th>Resident Names</th>
+                            <th>Room Number</th>
+                            <th>Telephone Number</th>
+                            <th>Block Name</th>
+                            <th>Key Type</th>
+                            <th>Date Issued</th>
+                            <th>Security Issued</th>
+                            <th>Date Returned</th>
+                            <th>Security Received</th>
+                            <th>Return Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="keyTableBody"></tbody>
+                </table>
+            </div>
+            <div id="keyPagination" class="pagination-container"></div>
+        </div>
+        
+        <!-- MasterCard Control Sub-Section -->
+        <div id="masterCardSection" class="sub-section">
+            <div class="controls">
+                <button id="issueMasterCardBtn" class="action-btn"><i class="fas fa-plus-circle"></i> Issue MasterCard</button>
+                <div class="search-container">
+                    <input type="text" id="masterCardSearchInput" placeholder="Search...">
+                    <button id="masterCardSearchBtn"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <button id="exportMasterCardDataBtn" class="export-btn"><i class="fas fa-download"></i> Export Data</button>
+            </div>
+
+            <div class="table-container">
+                <table id="masterCardTable">
+                    <thead>
+                        <tr>
+                            <th>Staff Names</th>
+                            <th>Staff Department</th>
+                            <th>Date Issued</th>
+                            <th>Security Issued</th>
+                            <th>Mastercard Type</th>
+                            <th>Date Returned</th>
+                            <th>Security Received</th>
+                            <th>Return Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="masterCardTableBody"></tbody>
+                </table>
+            </div>
+            <div id="masterCardPagination" class="pagination-container"></div>
+        </div>
+    </section>
+    
+    <!-- Gaming Control Section -->
+    <section id="gamingControlSection" class="section">
+        <div class="welcome-message">
+            <h2>Welcome to Gaming Control</h2>
+        </div>
+
+        <!-- Remote Issuance Sub-Section -->
+        <div id="remoteIssuanceSection" class="sub-section">
+            <div class="controls">
+                <button id="issueRemoteBtn" class="action-btn"><i class="fas fa-plus-circle"></i> Issue Remote</button>
+                <div class="search-container">
+                    <input type="text" id="remoteSearchInput" placeholder="Search...">
+                    <button id="remoteSearchBtn"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <button id="exportRemoteDataBtn" class="export-btn"><i class="fas fa-download"></i> Export Data</button>
+            </div>
+
+            <div class="table-container">
+                <table id="remoteTable">
+                    <thead>
+                        <tr>
+                            <th>Resident Names</th>
+                            <th>Room Number</th>
+                            <th>Telephone Number</th>
+                            <th>Block Name</th>
+                            <th>Remote Type</th>
+                            <th>Date Issued</th>
+                            <th>Security Issued</th>
+                            <th>Date Returned</th>
+                            <th>Security Received</th>
+                            <th>Return Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="remoteTableBody"></tbody>
+                </table>
+            </div>
+            <div id="masterCardPagination" class="pagination-container"></div>
+        </div>
+
+        <!-- Game Item Issuance Sub-Section -->
+        <div id="gameItemIssuanceSection" class="sub-section">
+            <div class="controls">
+                <button id="issueGameItemBtn" class="action-btn"><i class="fas fa-plus-circle"></i> Issue Game Item</button>
+                <div class="search-container">
+                    <input type="text" id="gameItemSearchInput" placeholder="Search...">
+                    <button id="gameItemSearchBtn"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <button id="exportGameItemDataBtn" class="export-btn"><i class="fas fa-download"></i> Export Data</button>
+            </div>
+
+            <div class="table-container">
+                <table id="gameItemTable">
+                    <thead>
+                        <tr>
+                            <th>Resident Names</th>
+                            <th>Room Number</th>
+                            <th>Telephone Number</th>
+                            <th>Block Name</th>
+                            <th>Game Item</th>
+                            <th>Status Out</th> 
+                            <th>Date Issued</th>
+                            <th>Security Issued</th>
+                            <th>Date Returned</th>
+                            <th>Security Received</th>
+                            <th>Return Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="gameItemTableBody"></tbody>
+                </table>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Generator Section -->
+    <section id="generatorSection" class="section">
+        <!-- Fire Alarms Sub-Section -->
+        <!-- Fire Alarms Sub-Section -->
+        <div id="fireAlarmsSection" class="sub-section">
+            <div class="controls">
+                <button id="addFireAlarmBtn" class="action-btn"><i class="fas fa-plus-circle"></i> Add Fire Alarm</button>
+                <div class="search-container">
+                    <input type="text" id="fireAlarmSearchInput" placeholder="Search...">
+                    <button id="fireAlarmSearchBtn"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <button id="exportFireAlarmDataBtn" class="export-btn"><i class="fas fa-download"></i> Export Data</button>
+            </div>
+
+            <div class="table-container">
+                <table id="fireAlarmTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Room Number</th>
+                            <th>Floor</th>
+                            <th>Triggered By</th>
+                            <th>Fire Alarm Level</th>
+                            <th>Action Taken</th>
+                            <th>Security Assistant Responded</th>
+                        </tr>
+                    </thead>
+                    <tbody id="fireAlarmTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Power Blackout Sub-Section -->
+        <div id="powerBlackoutSection" class="sub-section">
+            <div class="controls">
+                <button id="addBlackoutBtn" class="action-btn"><i class="fas fa-plus-circle"></i> Add Blackout Record</button>
+                <div class="search-container">
+                    <input type="text" id="blackoutSearchInput" placeholder="Search...">
+                    <button id="blackoutSearchBtn"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <button id="exportBlackoutDataBtn" class="export-btn"><i class="fas fa-download"></i> Export Data</button>
+            </div>
+
+            <div class="table-container">
+                <table id="blackoutTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Generator Start Time</th>
+                            <th>Fuel Level Before (%)</th>
+                            <th>Generator Stop Time</th>
+                            <th>Fuel Level After (%)</th>
+                            <th>Run Duration (hh:mm:ss)</th>
+                            <th>Security Assistant Name</th>
+                            <th>Fuel Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="blackoutTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Fuel Delivery Sub-Section -->
+        <div id="fuelDeliverySection" class="sub-section">
+            <div class="controls">
+                <button id="addDeliveryBtn" class="action-btn"><i class="fas fa-plus-circle"></i> Add Delivery</button>
+                <div class="search-container">
+                    <input type="text" id="deliverySearchInput" placeholder="Search...">
+                    <button id="deliverySearchBtn"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <button id="exportDeliveryDataBtn" class="export-btn"><i class="fas fa-download"></i> Export Data</button>
+            </div>
+
+            <div class="table-container">
+                <table id="deliveryTable">
+                    <thead>
+                        <tr>
+                            <th>Delivery Date</th>
+                            <th>Driver Name</th>
+                            <th>Fuel Delivered (liters)</th>
+                            <th>Delivery Time</th>
+                            <th>Security Assistant Name</th>
+                            <th>Generator Running Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="deliveryTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Daily Fuel Level Sub-Section -->
+        <div id="dailyFuelSection" class="sub-section">
+            <div class="controls">
+                <button id="addFuelLevelBtn" class="action-btn"><i class="fas fa-plus-circle"></i> Record Fuel Level</button>
+                <div class="search-container">
+                    <input type="text" id="fuelLevelSearchInput" placeholder="Search...">
+                    <button id="fuelLevelSearchBtn"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <button id="exportFuelLevelDataBtn" class="export-btn"><i class="fas fa-download"></i> Export Data</button>
+            </div>
+
+            <div class="table-container">
+                <table id="fuelLevelTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Fuel Level (%)</th>
+                            <th>Security Assistant</th>
+                            <th>Fuel Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="fuelLevelTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Fuel Top-Up Sub-Section -->
+        <div id="fuelTopUpSection" class="sub-section">
+            <div class="controls">
+                <button id="addTopUpBtn" class="action-btn"><i class="fas fa-plus-circle"></i> Add Top-Up Record</button>
+                <div class="search-container">
+                    <input type="text" id="topUpSearchInput" placeholder="Search...">
+                    <button id="topUpSearchBtn"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <button id="exportTopUpDataBtn" class="export-btn"><i class="fas fa-download"></i> Export Data</button>
+            </div>
+
+            <div class="table-container">
+                <table id="fuelTopUpTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Initial Fuel Level (%)</th>
+                            <th>Fuel Added (Liters)</th>
+                            <th>Final Fuel Level (%)</th>
+                            <th>Security Assistant</th>
+                            <th>Fuel Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="fuelTopUpTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODALS -->
+    <!-- Issue Key Modal -->
+    <div id="issueKeyModal" class="modal">
+        <div class="modal-content">
+            <h3><i class="fas fa-key"></i> Issue Key</h3>
+            <form id="issueKeyForm">
+                <div class="form-group">
+                    <label for="residentFirstName">First Name</label>
+                    <input type="text" id="residentFirstName" name="residentFirstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="residentLastName">Last Name</label>
+                    <input type="text" id="residentLastName" name="residentLastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="roomNo">Room No:</label>
+                    <input type="text" id="roomNo" required>
+                </div>
+                <div class="form-group">
+                    <label for="telNumber">Tel Number:</label>
+                    <input type="tel" pattern="[0-9]{10}" id="telNumber" required placeholder="Enter phone number start with 07*******">
+                </div>
+                <div class="form-group">
+                    <label for="block">Block:</label>
+                    <input type="text" id="block" required placeholder="Enter Block">
+                </div>
+                <div class="form-group">
+                    <label for="keyType">Key Type:</label>
+                    <input type="text" id="keyType" required placeholder="Enter Key Type">
+                </div>
+                <div class="form-group">
+                    <label for="securityIssued">Security Issued:</label>
+                    <input type="text" id="securityIssued" required>
+                </div>
+                <div class="modal-buttons">
+                    <button type="submit" class="submit-btn"><i class="fas fa-check"></i> Submit</button>
+                    <button type="button" class="cancel-btn"><i class="fas fa-times"></i> Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Issue MasterCard Modal -->
+    <div id="issueMasterCardModal" class="modal">
+        <div class="modal-content">
+            <h3><i class="fas fa-id-card"></i> Issue MasterCard</h3>
+            <form id="issueMasterCardForm">
+                <div class="form-group">
+                    <label for="staffFirstName">Staff Name:</label>
+                    <input type="text" id="staffFirstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="staffLastName">Staff Last Name:</label>
+                    <input type="text" id="staffLastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department:</label>
+                    <input type="text" id="department" required placeholder="Enter Department">
+                </div>
+                <div class="form-group">
+                    <label for="masterCardType">MasterCard Type:</label>
+                    <select id="masterCardType" required>
+                        <option value="">Select MasterCard Type</option>
+                        <option value="maintenance_mastercard">Maintenance MasterCard</option>
+                        <option value="housekeeping_mastercard">Housekeeping MasterCard</option>
+                        <option value="security_mastercard">Security MasterCard</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="securityIssuedCard">Security Issued:</label>
+                    <input type="text" id="securityIssuedCard" required>
+                </div>
+                <div class="modal-buttons">
+                    <button type="submit" class="submit-btn"><i class="fas fa-check"></i> Submit</button>
+                    <button type="button" class="cancel-btn"><i class="fas fa-times"></i> Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Issue Remote Modal -->
+    <div id="issueRemoteModal" class="modal">
+        <div class="modal-content">
+            <h3><i class="fas fa-television"></i> Issue Remote</h3>
+            <form id="issueRemoteForm">
+                <div class="form-group">
+                    <label for="residentFirstName">First Name</label>
+                    <input type="text" id="residentFirstName" name="residentFirstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="residentLastName">Last Name</label>
+                    <input type="text" id="residentLastName" name="residentLastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="roomNumber">Room Number:</label>
+                    <input type="text" id="roomNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="telNumber">Tel Number:</label>
+                    <input type="tel" pattern="[0-9]{10}" id="telNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="blockName">Block Name:</label>
+                    <input type="text" id="blockName" required placeholder="Enter Block">
+                </div>
+                <div class="form-group">
+                    <label for="remoteType">Remote Type:</label>
+                    <input type="text" id="remoteType" required placeholder="Enter Remote Type">
+                </div>
+                <div class="form-group">
+                    <label for="securityIssued">Security Issued:</label>
+                    <input type="text" id="securityIssued" required>
+                </div>
+                <div class="modal-buttons">
+                    <button type="submit" class="submit-btn"><i class="fas fa-check"></i> Submit</button>
+                    <button type="button" id="closeRemoteModal" class="cancel-btn"><i class="fas fa-times"></i> Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Issue Game Item Modal -->
+    <div id="issueGameItemModal" class="modal">
+        <div class="modal-content">
+            <h3><i class="fas fa-gamepad"></i> Issue Game Item</h3>
+            <form id="issueGameItemForm">
+                <div class="form-group">
+                    <label for="residentFirstName">First Name</label>
+                    <input type="text" id="residentFirstName" name="residentFirstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="residentLastName">Last Name</label>
+                    <input type="text" id="residentLastName" name="residentLastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="roomNumber">Room Number:</label>
+                    <input type="text" id="roomNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="telNumber">Tel Number:</label>
+                    <input type="tel" pattern="[0-9]{10}" id="telNumber" required>
+                </div>
+                <div class="form-group">
+                    <label for="blockName">Block Name:</label>
+                    <input type="text" id="blockName" required placeholder="Enter Block">
+                </div>
+                <div class="form-group">
+                    <label for="gameItem">Game Item:</label>
+                    <input type="text" id="gameItem" required placeholder="Enter Game Item Type">
+                </div>
+                <div class="form-group">
+                    <label for="statusOut">Status Out:</label>
+                    <input type="text" id="statusOut" required placeholder="Enter Status Out">
+                </div>
+                <div class="form-group">
+                    <label for="securityIssued">Security Issued:</label>
+                    <input type="text" id="securityIssued" required>
+                </div>
+                <div class="modal-buttons">
+                    <button type="submit" class="submit-btn"><i class="fas fa-check"></i> Submit</button>
+                    <button type="button" id="closeGameItemModal" class="cancel-btn"><i class="fas fa-times"></i> Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+
+    <!-- Add Fire Alarm Modal -->
+    <div id="addFireAlarmModal" class="modal">
+        <div class="modal-content">
+            <h3><i class="fas fa-fire-extinguisher"></i> Add Fire Alarm Record</h3>
+            <form id="fireAlarmForm">
+                <div class="form-group">
+                    <label for="Date">Date:</label>
+                    <input type="date" id="Date" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" required>
+                </div>
+                <div class="form-group">
+                    <label for="room_number">Room Number:</label>
+                    <input type="text" id="room_number" required>
+                </div>
+                <div class="form-group">
+                    <label for="floor">Floor:</label>
+                    <input type="text" id="floor" required>
+                </div>
+                <div class="form-group">
+                    <label for="triggered_by">Triggered By:</label>
+                    <input type="text" id="triggered_by" required>
+                </div>
+                <div class="form-group">
+                    <label for="alarm_level">Fire Alarm Level:</label>
+                    <select id="alarm_level" required>
+                        <option value="">Select Level</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="action_taken">Action Taken:</label>
+                    <input type="text" id="action_taken" required>
+                </div>
+                <div class="form-group">
+                    <label for="security_assistant">Security Assistant:</label>
+                    <input type="text" id="security_assistant" required>
+                </div>
+                <div class="modal-buttons">
+                    <button type="submit" class="submit-btn">Submit</button>
+                    <button type="button" class="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+    <!-- Add Power Blackout Modal -->
+    <div id="addBlackoutModal" class="modal">
+        <div class="modal-content">
+            <h3><i class="fas fa-power-off"></i> Add Power Blackout Record</h3>
+            <form id="blackoutForm">
+                <div class="form-group">
+                    <label for="blackoutDate">Date:</label>
+                    <input type="date" id="blackoutDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="generatorStartTime">Generator Start Time:</label>
+                    <input type="time" id="generatorStartTime" required>
+                </div>
+                <div class="form-group">
+                    <label for="fuelLevelBefore">Fuel Level Before (%):</label>
+                    <input type="number" id="fuelLevelBefore" min="0" max="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="generatorStopTime">Generator Stop Time:</label>
+                    <input type="time" id="generatorStopTime" required>
+                </div>
+                <div class="form-group">
+                    <label for="fuelLevelAfter">Fuel Level After (%):</label>
+                    <input type="number" id="fuelLevelAfter" min="0" max="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="securityAssistantName">Security Assistant Name:</label>
+                    <input type="text" id="securityAssistantName" required>
+                </div>
+                <div class="modal-buttons">
+                    <button type="submit" class="submit-btn"><i class="fas fa-check"></i> Submit</button>
+                    <button type="button" class="cancel-btn"><i class="fas fa-times"></i> Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+<div id="recordDeliveryModal" class="modal">
+    <div class="modal-content">
+        <h3><i class="fas fa-truck"></i> Add Fuel Delivery</h3>
+        <form id="deliveryForm">
+            <div class="form-group">
+                <label for="deliveryDate">Delivery Date:</label>
+                <input type="date" id="deliveryDate" required>
+            </div>
+            <div class="form-group">
+                <label for="driverName">Driver Name:</label>
+                <input type="text" id="driverName" required>
+            </div>
+            <div class="form-group">
+                <label for="fuelDelivered">Fuel Delivered (liters):</label>
+                <input type="number" id="fuelDelivered" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="deliveryTime">Delivery Time:</label>
+                <input type="time" id="deliveryTime" required>
+            </div>
+            <div class="form-group">
+                <label for="securityAssistant">Security Assistant Name:</label>
+                <input type="text" id="securityAssistant" required>
+            </div>
+            <div class="form-group">
+                <label for="generatorStatus">Generator Running Status:</label>
+                <select id="generatorStatus" required>
+                    <option value="">Select Status</option>
+                    <option value="Running">Running</option>
+                    <option value="Not Running">Not Running</option>
+                </select>
+            </div>
+            <div class="modal-buttons">
+                <button type="submit" class="submit-btn"><i class="fas fa-check"></i> Submit</button>
+                <button type="button" class="cancel-btn"><i class="fas fa-times"></i> Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Add Daily Fuel Level Modal -->
+<div id="addFuelLevelModal" class="modal">
+    <div class="modal-content">
+        <h3><i class="fas fa-gas-pump"></i> Add Daily Fuel Level</h3>
+        <form id="fuelLevelForm">
+            <div class="form-group">
+                <label for="fuelDate">Date:</label>
+                <input type="date" id="fuelDate" required>
+            </div>
+            <div class="form-group">    
+                <label for="time">Time:</label>
+                <input type="time" id="time" required>
+            </div>
+            <div class="form-group">
+                <label for="fuelLevel">Fuel Level (%):</label>
+                <input type="number" id="fuelLevel" min="0" max="100" required>
+            </div>
+            <div class="form-group">
+                <label for="securityAssistantFuel">Security Assistant:</label>
+                <input type="text" id="securityAssistantFuel" required>
+            </div>
+            <div class="modal-buttons">
+                <button type="submit" class="submit-btn"><i class="fas fa-check"></i> Submit</button>
+                <button type="button" class="cancel-btn"><i class="fas fa-times"></i> Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Fuel Top-Up Modal -->
+<div id="fuelTopUpModal" class="modal">
+    <div class="modal-content">
+        <h3><i class="fas fa-gas-pump"></i> Fuel Top-Up</h3>
+        <form id="fuelTopUpForm">
+            <div class="form-group">
+                <label for="initialFuelLevel">Initial Fuel Level (%):</label>
+                <input type="number" id="initialFuelLevel" min="0" max="100" required>
+            </div>
+            <div class="form-group">
+                <label for="fuelAdded">Amount Added (Liters):</label>
+                <input type="number" id="fuelAdded" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="finalFuelLevel">Final Fuel Level (%):</label>
+                <input type="number" id="finalFuelLevel" min="0" max="100" required>
+            </div>
+            <div class="form-group">
+                <label for="securityAssistant">Security Assistant:</label>
+                <input type="text" id="securityAssistant" required>
+            </div>
+            <div class="modal-buttons">
+                <button type="submit" class="submit-btn"><i class="fas fa-check"></i> Submit</button>
+                <button type="button" class="cancel-btn"><i class="fas fa-times"></i> Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Records Section -->
+<section id="recordsSection" class="section">
+    <div class="welcome-message">
+        <h2>Welcome to Records</h2>
+    </div>
+
+    <!-- Statements Sub-Section -->
+    <div id="statementsSection" class="sub-section">
+        <div class="controls">
+            <button id="addStatementBtn" class="action-btn"><i class="fas fa-plus-circle"></i> Add Statement</button>
+            <div class="search-container">
+                <input type="text" id="statementSearchInput" placeholder="Search...">
+                <button id="statementSearchBtn"><i class="fas fa-search"></i> Search</button>
+            </div>
+            <button id="exportStatementDataBtn" class="export-btn"><i class="fas fa-download"></i> Export Data</button>
+        </div>
+
+        <!-- Statement Table with expandable rows -->
+<div class="table-responsive">
+    <table class="table table-bordered" id="statementTable">
+        <thead class="thead-light">
+            <tr>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Room Number</th>
+                <th>Incident Category</th>
+                <th>Security Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="statementTableBody">
+            <!-- Table rows will be dynamically populated here -->
+        </tbody>
+    </table>
+</div>
+        
+    </div>
+
+    <!-- Gatepass Sub-Section -->
+    <div id="gatepassSection" class="sub-section">
+        <div class="controls">
+            <button id="addGatepassBtn" class="action-btn"><i class="fas fa-plus-circle"></i> Add Gatepass</button>
+            <div class="search-container">
+                <input type="text" id="gatepassSearchInput" placeholder="Search...">
+                <button id="gatepassSearchBtn"><i class="fas fa-search"></i> Search</button>
+            </div>
+            <button id="exportGatepassDataBtn" class="export-btn"><i class="fas fa-download"></i> Export Data</button>
+        </div>
+
+        <div class="table-container">
+            <table id="gatepassTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Driver's Names</th>
+                        <th>Driver's Phone Number</th>
+                        <th>Items From</th>
+                        <th>Items To</th> 
+                        <th>Security Name</th>
+                    </tr>
+                </thead>
+                <tbody id="gatepassTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+
+<!-- Add Statement Modal -->
+<div id="addStatementModal" class="modal">
+    <div class="modal-content">
+        <h3><i class="fas fa-file-alt"></i> Add Statement</h3>
+        <form id="statementForm">
+            <div class="form-group">
+                <label for="statementFirstName">First Name:</label>
+                <input type="text" id="statementFirstName" name="statementFirstName" required>
+            </div>
+              
+            <div class="form-group">
+                <label for="statementSecondName">Second Name:</label>
+                <input type="text" id="statementSecondName" name="statementSecondName" required placeholder="enter name">
+            </div>
+              
+            <div class="form-group">
+                <label for="statementPhoneNumber">Phone Number:</label>
+                <input type="text" id="statementPhoneNumber" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="statementDate">Date of Incident:</label>
+                <input type="date" id="statementDate" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="statementTime">Time of Incident:</label>
+                <input type="time" id="statementTime" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="statementRoomNumber">Room Number:</label>
+                <input type="text" id="statementRoomNumber" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="statementPlaceOfIncident">Place of Incident:</label>
+                <input type="text" id="statementPlaceOfIncident" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="statementSecurityName">Security Name:</label>
+                <input type="text" id="statementSecurityName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="statementObNumber">OB Number:</label>
+                <input type="text" id="statementObNumber" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="statementIncidentDescription">Incident Description:</label>
+                <textarea id="statementIncidentDescription" rows="5" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="statementDesignation">Designation:</label>
+                <input type="text" id="statementDesignation" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="statementIncidentCategory">Incident Category:</label>
+                <input type="text" id="statementIncidentCategory" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="statementUploadedStatement">Upload Statement:</label>
+                <input type="file" 
+                       id="statementUploadedStatement" 
+                       accept=".pdf,.doc,.docx,image/*" 
+                       capture="user"> <!-- uses front camera on mobile -->
+            </div>
+            
+            
+            <div class="modal-buttons">
+                <button type="submit" class="submit-btn"><i class="fas fa-check"></i> Submit</button>
+                <button type="button" class="cancel-btn"><i class="fas fa-times"></i> Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<!-- Add Gatepass Modal -->
+<div id="addGatepassModal" class="modal">
+    <div class="modal-content">
+        <h3><i class="fas fa-clipboard-check"></i> Add Gatepass</h3>
+        <form id="gatepassForm">
+              
+            <div class="form-group">
+                <label for="gatepassDate">Date:</label>
+                <input type="date" id="gatepassDate" required>
+                <div class="time-input">
+                    <label for="gatepassTime">Time:</label>
+                    <input type="time" id="gatepassTime" required>
+                </div>
+            </div>
+            <div class="driver-details">
+                <div class="form-group">
+                    <label for="driversName">Driver's Full Name:</label>
+                    <input type="text" id="driversName" required>
+                </div>
+                <div class="form-group">
+                    <label for="driversPhone">Driver's Phone Number:</label>
+                    <input type="tel" id="driversPhone" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label for="carRegNo">Car Registration Number (if any):</label>
+                    <input type="text" id="carRegNo">
+                </div>
+                <div class="form-group">
+                    <label for="relationToHostel">Relation to Hostel/Resident:</label>
+                    <input type="text" id="relationToHostel" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="itemsFrom">Items From:</label>
+                <input type="text" id="itemsFrom" required>
+            </div>
+            <div class="form-group">
+                <label for="itemsTo">Items To:</label>
+                <input type="text" id="itemsTo" required>
+            </div>
+            
+            
+            <div class="form-group">
+                <label for="transferReason">Reason for Transfer:</label>
+                <input type="text" id="transferReason" required>
+            </div>
+            <div class="form-group">
+                <label for="itemsList">Items List:</label>
+                <input type="text" id="itemsList" required>
+            </div>
+            <div class="form-group">
+                <label for="securityNameGatepass">Security Name:</label>
+                <input type="text" id="securityNameGatepass" required>
+            </div>
+            <div class="form-group">
+                <label for="gatepassUploadedGatepass">Upload Gatepass:</label>
+                <input type="file" 
+                       id="gatepassUploadedGatepass" 
+                       accept=".pdf,.doc,.docx,image/*" 
+                       capture="user"> <!-- uses front camera on mobile -->
+            </div>
+            <div class="modal-buttons">
+                <button type="submit" class="submit-btn"><i class="fas fa-check"></i> Submit</button>
+                <button type="button" class="cancel-btn"><i class="fas fa-times"></i> Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+    <!-- Return Status Modal -->
+    <div id="returnStatusModal" class="modal">
+        <div class="modal-content">
+            <h3><i class="fas fa-undo"></i> Update Return Status</h3>
+            <form id="returnStatusForm">
+                <div class="form-group">
+                    <label for="securityReceived">Security Received:</label>
+                    <input type="text" id="securityReceived" required>
+                </div>
+                <div class="form-group">
+                    <label for="returnStatus">Status:</label>
+                    <select id="returnStatus" required>
+                        <option value="">Select Status</option>
+                        <option value="Returned">Returned</option>
+                        <option value="Lost">Lost</option>
+                        <option value="Damaged">Damaged</option>
+                        <option value="Not Returned">Not Returned</option>
+                    </select>
+                </div>
+                <div class="modal-buttons">
+                    <button type="submit" class="submit-btn"><i class="fas fa-check"></i> Submit</button>
+                    <button type="button" class="cancel-btn"><i class="fas fa-times"></i> Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; Qwetu 2025. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="sidebar.js"></script>
+    <script src="path/to/your/main.js"></script>
+    <script src="script.js"></script>
+<script src="gaming.js"></script>
+<script src="fireAlarm.js"></script>
+<script src="fuelLevel.js"></script>
+<script src="fuelTopUp.js"></script>
+<script src="dailyFuelLevel.js"></script>
+<script src="powerBlackOut.js"></script>
+<script src="fuelDelivery.js"></script>
+<script src="statement.js"></script>
+<script src="sidebar.js"></script>
+<script src="main.js"></script>
+<script src="gatepass.js"></script>
+<script src="patrol.js"></script>
+
+
+</body>
+</html>    
